@@ -1,3 +1,5 @@
+#Language: MIPS Assembler
+
 .data
 	#valores de entrada
 	tam: .word 7  
@@ -5,14 +7,14 @@
 	entrada: .byte 47 45 45 52 54 53 49 
 	
 	contador: .byte 0
-	#valores de salida (el tam ser· tres porque solo hay tres opciones), tres contadores uno para cada opciÛn
+	#valores de salida (el tam ser√° tres porque solo hay tres opciones), tres contadores uno para cada opci√≥n
 	tam1: .word 3
 	salida: .space 3
 	cont1: .byte 0
 	cont2: .byte 0
 	cont3: .byte 0
 .text
-	#los registros $letra1 tendr·n los vectores
+	#los registros $letra1 tendr√°n los vectores
 	#carga de valores de entrada
 	la $t1, entrada
 	lw $t2, tam
@@ -29,7 +31,7 @@
 	sub $t5, $t2, 1
 		_for:
 			bge $t4, $t2, _finfor
-			#calculamos la diferencia aquÌ con los valores de $t1
+			#calculamos la diferencia aqu√≠ con los valores de $t1
 			
 			lb  $k0, ($t1)
 			sub $k1, $k0, $t3
@@ -48,7 +50,7 @@
 			   	addi $s5, $s5, 1
 			_fincond:
 			
-			#almacena los valores en el vector salida cuando ya no se va a entrar m·s al for
+			#almacena los valores en el vector salida cuando ya no se va a entrar m√°s al for
 			_if2:
 				bne $t5, $t4, _finif2
 			
@@ -67,7 +69,7 @@
 		_finfor:
 			li $t4, 0
 			sub $a1, $a1, 2
-			#asignamos el registro $k0 para el valor del vector y restamos tres a la direcciÛn de memoria de $a1
+			#asignamos el registro $k0 para el valor del vector y restamos tres a la direcci√≥n de memoria de $a1
 			#para que comience desde el principio
 		_for2:
 		bge $t4, $a2 _fin
