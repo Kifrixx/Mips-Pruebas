@@ -1,4 +1,4 @@
-#Lenguaje: MIPS Assembler
+#Language: MIPS Assembler
 .data
 	
 	tam: .word 5 
