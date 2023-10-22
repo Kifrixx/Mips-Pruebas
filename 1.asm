@@ -1,3 +1,4 @@
+#Lenguaje: MIPS Assembler
 .data
 	
 	tam: .word 5 
@@ -7,8 +8,8 @@
 	contador: .byte 0
 	
 .text 
-	#dirección de memoria del vector1, no nos da el primer valor, esto lo hará el lb $t3, ($t1), en los condicionales 
-	#no se puede trabajar con la dirección sino con el valor.
+	#direcciÃ³n de memoria del vector1, no nos da el primer valor, esto lo harÃ¡ el lb $t3, ($t1), en los condicionales 
+	#no se puede trabajar con la direcciÃ³n sino con el valor.
 	la $t1, vector1
 	lw $t2, tam
 	
@@ -54,11 +55,11 @@
 		
 		addi $s1, $s1, 1
 		addi $a1, $a1, 1
-		#sumamos uno a la dirección de memoria para que así se mueva a la siguiente posición
+		#sumamos uno a la direcciÃ³n de memoria para que asÃ­ se mueva a la siguiente posiciÃ³n
 		addi $t1, $t1, 1
 	j _for
 		li $v0, 10
 		syscall
 _fin:
-#En conclusión, se puede ver que al no tener ningún valor en el vector de salida, lo primero que hay que hacer es guardarlo en
-#memoria para después acceder a sus correspondientes valores
+#En conclusiÃ³n, se puede ver que al no tener ningÃºn valor en el vector de salida, lo primero que hay que hacer es guardarlo en
+#memoria para despuÃ©s acceder a sus correspondientes valores
